@@ -1,19 +1,19 @@
 <template>
   <div id="app">
+    <Navbar />
     <div class="bg-gray-100 flex">
-      <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
+      <div class="px-8 pt-4 pb-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
         <div class="xl:max-w-lg xl:ml-auto">
-          <img class="h-10" src="/img/logo-blue.svg" alt="Workcation">
           <img class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-72 sm:w-full sm:object-cover sm:object-center lg:hidden" src="/img/beach-work.jpg" alt="Woman workcationing on the beach">
           <h1 class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
             You can work from anywhere.
-            <br class="hidden lg:inline"><span class="text-brand-blue">Take advantage of it.</span>
+            <br class="hidden lg:inline"><span class="text-indigo-500">Take advantage of it.</span>
           </h1>
           <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
             Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
           </p>
           <div class="mt-4 sm:mt-6">
-            <a href="#" class="btn bg-brand-blue text-white shadow-lg sm:text-base">Book your escape</a>
+            <a href="#" class="btn bg-indigo-500 text-white shadow-lg sm:text-base">Book your escape</a>
           </div>
         </div>
       </div>
@@ -36,11 +36,13 @@
 </template>
 
 <script>
+import Navbar from './components/Navbar'
 import DestinationCard from './components/DestinationCard'
 export default {
   name: 'app',
   components: {
     DestinationCard,
+    Navbar,
   },
   data() {
     return {
@@ -87,7 +89,18 @@ export default {
           imageUrl: '/img/miami.jpg',
           imageAlt: 'Beach in Miami',
         },
-      ]
+      ],
+      property: {
+        imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        imageAlt: 'Rear view of modern home with pool',
+        beds: 3,
+        baths: 2,
+        title: "Modern executive home in the heart of historic Los Angeles",
+        priceInCents: 190000,
+        formattedPrice: "$1,900.00",
+        reviewCount: 34,
+        rating: 4,
+      }
     }
   }
 }
