@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="hidden lg:block lg:w-1/2 lg:relative">
+      <div class="hidden lg:block lg:w-1/2 lg:relative lg:z-0">
         <img class="absolute inset-0 h-full w-full object-cover object-center" src="/img/beach-work.jpg" alt="Woman workcationing on the beach">
       </div>
     </div>
